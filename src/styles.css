@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------
+   Base / accessibility
+---------------------------- */
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(34, 211, 238, 0.9);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* ---------------------------
+   Premium background: grid + glow + noise (CSS-only)
+---------------------------- */
+.bg-premium {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-premium::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  /* faint grid */
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at 30% 0%, black 0%, transparent 65%);
+  opacity: 0.35;
+}
+
+.bg-premium::after {
+  content: "";
+  position: absolute;
+  inset: -200px;
+  pointer-events: none;
+  /* soft glows */
+  background:
+    radial-gradient(600px 400px at 20% 10%, rgba(34,211,238,0.22), transparent 60%),
+    radial-gradient(500px 360px at 80% 20%, rgba(34,211,238,0.12), transparent 60%),
+    radial-gradient(700px 500px at 40% 90%, rgba(255,255,255,0.06), transparent 70%);
+  filter: blur(6px);
+}
+
+/* Noise overlay (SVG data-uri) */
+.noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+}
+
+/* Light mode polish */
+.light :root,
+.light body {
+  color-scheme: light;
+}
