@@ -36,7 +36,7 @@ export const projects = [
   },
   {
     id: "4",
-    title: "uneCraft - Student Management System",
+    title: "TuneCraft - Student Management System",
     description:
       "A System for admins to manage students, teachers, courses, and batches, with features for enrollment and streamlined course administration.",
     stack: ["React", "Node.js","Express.js","MongoDB","API"],
