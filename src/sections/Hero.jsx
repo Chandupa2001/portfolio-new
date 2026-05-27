@@ -4,7 +4,7 @@ import { Button } from "../components/Button.jsx";
 import { Icon } from "../components/Icon.jsx";
 import { profile, socials } from "../data/socials.js";
 import { useMotionPrefs } from "../utils/motion.js";
-import avatarImg from "../assets/me.jpg";
+import avatarImg from "../assets/me.jpeg";
 import { Card } from "../components/Card.jsx";
 
 export function Hero() {
