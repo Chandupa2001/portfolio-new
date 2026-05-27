@@ -69,6 +69,7 @@ export function Hero() {
                   href={profile.cvPath}
                   variant="primary"
                   aria-label="Download CV"
+                  download
                 >
                   Download CV <Icon name="arrow" className="h-5 w-5" />
                 </Button>

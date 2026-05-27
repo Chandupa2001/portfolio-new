@@ -7,7 +7,7 @@ export const profile = {
   email: "chanduparanawaka2001@gmail.com",
   github: "Chandupa2001",
   linkedin: "Chandupa Ranawaka",
-  cvPath: "/cv.pdf" // put cv.pdf in /public
+  cvPath: "/Chandupa Ranawaka - CV.pdf" 
 };
 
 export const socials = [
